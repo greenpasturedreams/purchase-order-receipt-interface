@@ -75,7 +75,7 @@ sequenceDiagram
  W->>A: Identical retry
  A->>D: Check same successful key and payload hash
  D-->>A: Original processing reference
- A->>D: Audit duplicate; no business balance changes
+ A->>D: Audit duplicate without additional business balance changes
  A-->>W: DUPLICATE plus original reference
 ```
 
