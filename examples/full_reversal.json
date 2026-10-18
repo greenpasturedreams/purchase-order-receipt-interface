@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_system": "WMS_DEMO",
+  "receipt_id": "REV0001",
+  "action": "REVERSAL",
+  "po_number": "PO1001",
+  "line_number": 1,
+  "quantity": "25.000",
+  "uom": "EA",
+  "warehouse": "MAIN",
+  "received_at": "2026-10-18T11:00:00Z",
+  "original_receipt_id": "RCPT0001"
+}

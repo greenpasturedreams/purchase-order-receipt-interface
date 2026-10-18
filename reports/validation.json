@@ -1,0 +1,23 @@
+{
+  "reference_engine": "Python standard library / SQLite",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "reference_tests_passed": true,
+  "reconciliation_passed": true,
+  "sql_server_execution": "NOT EXECUTED: no SQL Server runtime available",
+  "uat_status": "Prepared; business execution and sign-off not performed",
+  "live_api_status": "Proposed contract; no HTTP endpoint deployed",
+  "canonical_valid_payload_sha256": "7ae6d4ea48edf21f68ef2ac314d81e2572b30f536b6ad350afd374836fd8fdca",
+  "cli_sequence": [
+    "POSTED",
+    "DUPLICATE",
+    "POSTED"
+  ],
+  "verified_source_sha256": {
+    "src/interface.py": "4a304c7eec48bc2df0490600deb8e34523f778fbcb4f10ef12f43b3f94ad9a9b",
+    "src/cli.py": "19c56e4fef5971837c1be7afb56c81d44d38b49b33c3437828eec1400e500f80",
+    "tests/test_interface.py": "ca7d2c9f9c3efdfeb672a60db2b29465858f39ebd26adc6d2304ab84642abf95",
+    "run_demo.py": "932a6cf6b955b7a1231337619170ee0bbc18b9d73c90fd44812a53d9a3993ed0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_system": "WMS_DEMO",
+  "receipt_id": "RCPT0001",
+  "action": "RECEIPT",
+  "po_number": "PO1001",
+  "line_number": 1,
+  "quantity": "25.000",
+  "uom": "EA",
+  "warehouse": "MAIN",
+  "received_at": "2026-10-18T10:00:00Z"
+}

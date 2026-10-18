@@ -1,0 +1,168 @@
+{
+  "fixed_demo_clock_utc": "2026-10-18T12:00:00+00:00",
+  "steps": [
+    {
+      "step": "First partial receipt",
+      "response": {
+        "outcome": "POSTED",
+        "http_status": 201,
+        "processing_reference": "WMS_DEMO/RCPT0001",
+        "error_code": null
+      }
+    },
+    {
+      "step": "Identical retry",
+      "response": {
+        "outcome": "DUPLICATE",
+        "http_status": 200,
+        "processing_reference": "WMS_DEMO/RCPT0001",
+        "error_code": null
+      }
+    },
+    {
+      "step": "Conflicting retry",
+      "response": {
+        "outcome": "REJECTED",
+        "http_status": 409,
+        "processing_reference": null,
+        "error_code": "IDEMPOTENCY_CONFLICT",
+        "message": "Posted key has a different business payload."
+      }
+    },
+    {
+      "step": "Full reversal",
+      "response": {
+        "outcome": "POSTED",
+        "http_status": 201,
+        "processing_reference": "WMS_DEMO/REV0001",
+        "error_code": null
+      }
+    },
+    {
+      "step": "Reversal retry",
+      "response": {
+        "outcome": "DUPLICATE",
+        "http_status": 200,
+        "processing_reference": "WMS_DEMO/REV0001",
+        "error_code": null
+      }
+    }
+  ],
+  "receipt_ledger": [
+    {
+      "source_system": "WMS_DEMO",
+      "receipt_id": "RCPT0001",
+      "action": "RECEIPT",
+      "po_number": "PO1001",
+      "line_number": 1,
+      "quantity_milli": 25000,
+      "delta_milli": 25000,
+      "uom": "EA",
+      "warehouse": "MAIN",
+      "received_at": "2026-10-18T10:00:00.000Z",
+      "original_receipt_id": null,
+      "payload_hash": "7ae6d4ea48edf21f68ef2ac314d81e2572b30f536b6ad350afd374836fd8fdca"
+    },
+    {
+      "source_system": "WMS_DEMO",
+      "receipt_id": "REV0001",
+      "action": "REVERSAL",
+      "po_number": "PO1001",
+      "line_number": 1,
+      "quantity_milli": 25000,
+      "delta_milli": -25000,
+      "uom": "EA",
+      "warehouse": "MAIN",
+      "received_at": "2026-10-18T11:00:00.000Z",
+      "original_receipt_id": "RCPT0001",
+      "payload_hash": "0c20ca5ea248a082da5a3f9e4a2a7769aaaaa98e152a35a25fbbde4f1ab23b67"
+    }
+  ],
+  "po_lines": [
+    {
+      "po_number": "PO1001",
+      "line_number": 1,
+      "material_id": "MAT100",
+      "uom": "EA",
+      "status": "OPEN",
+      "created_at": "2026-10-01T00:00:00.000Z",
+      "ordered_milli": 100000,
+      "received_milli": 0
+    },
+    {
+      "po_number": "PO1001",
+      "line_number": 2,
+      "material_id": "MAT200",
+      "uom": "EA",
+      "status": "CLOSED",
+      "created_at": "2026-10-01T00:00:00.000Z",
+      "ordered_milli": 50000,
+      "received_milli": 0
+    },
+    {
+      "po_number": "PO1002",
+      "line_number": 1,
+      "material_id": "MAT300",
+      "uom": "KG",
+      "status": "OPEN",
+      "created_at": "2026-10-01T00:00:00.000Z",
+      "ordered_milli": 200000,
+      "received_milli": 0
+    }
+  ],
+  "inventory": [
+    {
+      "warehouse": "MAIN",
+      "material_id": "MAT100",
+      "on_hand_milli": 0
+    },
+    {
+      "warehouse": "MAIN",
+      "material_id": "MAT200",
+      "on_hand_milli": 0
+    },
+    {
+      "warehouse": "MAIN",
+      "material_id": "MAT300",
+      "on_hand_milli": 0
+    }
+  ],
+  "attempt_audit": [
+    {
+      "attempt_id": 1,
+      "outcome": "POSTED",
+      "error_code": null,
+      "http_status": 201,
+      "processing_reference": "WMS_DEMO/RCPT0001"
+    },
+    {
+      "attempt_id": 2,
+      "outcome": "DUPLICATE",
+      "error_code": null,
+      "http_status": 200,
+      "processing_reference": "WMS_DEMO/RCPT0001"
+    },
+    {
+      "attempt_id": 3,
+      "outcome": "REJECTED",
+      "error_code": "IDEMPOTENCY_CONFLICT",
+      "http_status": 409,
+      "processing_reference": null
+    },
+    {
+      "attempt_id": 4,
+      "outcome": "POSTED",
+      "error_code": null,
+      "http_status": 201,
+      "processing_reference": "WMS_DEMO/REV0001"
+    },
+    {
+      "attempt_id": 5,
+      "outcome": "DUPLICATE",
+      "error_code": null,
+      "http_status": 200,
+      "processing_reference": "WMS_DEMO/REV0001"
+    }
+  ],
+  "reconciliation_passed": true
+}

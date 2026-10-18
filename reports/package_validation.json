@@ -1,0 +1,7 @@
+{
+  "local_markdown_links_checked": 32,
+  "automated_test_ids_in_plan": 28,
+  "functional_requirement_ids": 11,
+  "fresh_reference_evidence_verified": true,
+  "sql_server_runtime_validation": "Pending; not inferred from reference tests"
+}

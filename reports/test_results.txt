@@ -1,0 +1,33 @@
+test_TC01_valid_partial_receipt (test_interface.InterfaceTests.test_TC01_valid_partial_receipt) ... ok
+test_TC02_identical_retry_no_extra_post (test_interface.InterfaceTests.test_TC02_identical_retry_no_extra_post) ... ok
+test_TC03_conflicting_resubmission (test_interface.InterfaceTests.test_TC03_conflicting_resubmission) ... ok
+test_TC04_unknown_po (test_interface.InterfaceTests.test_TC04_unknown_po) ... ok
+test_TC05_unknown_line (test_interface.InterfaceTests.test_TC05_unknown_line) ... ok
+test_TC06_closed_line (test_interface.InterfaceTests.test_TC06_closed_line) ... ok
+test_TC07_uom_mismatch (test_interface.InterfaceTests.test_TC07_uom_mismatch) ... ok
+test_TC08_bad_quantities (test_interface.InterfaceTests.test_TC08_bad_quantities) ... ok
+test_TC09_over_receipt (test_interface.InterfaceTests.test_TC09_over_receipt) ... ok
+test_TC10_multiple_partial_receipts_exact_completion (test_interface.InterfaceTests.test_TC10_multiple_partial_receipts_exact_completion) ... ok
+test_TC11_invalid_json (test_interface.InterfaceTests.test_TC11_invalid_json) ... ok
+test_TC12_missing_unknown_duplicate_fields (test_interface.InterfaceTests.test_TC12_missing_unknown_duplicate_fields) ... ok
+test_TC13_schema_and_line_types (test_interface.InterfaceTests.test_TC13_schema_and_line_types) ... ok
+test_TC14_timestamp_rules (test_interface.InterfaceTests.test_TC14_timestamp_rules) ... ok
+test_TC15_source_and_warehouse (test_interface.InterfaceTests.test_TC15_source_and_warehouse) ... ok
+test_TC16_full_reversal_and_retry (test_interface.InterfaceTests.test_TC16_full_reversal_and_retry) ... ok
+test_TC17_unknown_or_wrong_original (test_interface.InterfaceTests.test_TC17_unknown_or_wrong_original) ... ok
+test_TC18_reversal_quantity_and_order (test_interface.InterfaceTests.test_TC18_reversal_quantity_and_order) ... ok
+test_TC19_double_reversal (test_interface.InterfaceTests.test_TC19_double_reversal) ... ok
+test_TC20_reversal_closed_line_allowed (test_interface.InterfaceTests.test_TC20_reversal_closed_line_allowed) ... ok
+test_TC21_negative_stock_reversal_guard (test_interface.InterfaceTests.test_TC21_negative_stock_reversal_guard) ... ok
+test_TC22_atomic_rollback_and_retry (test_interface.InterfaceTests.test_TC22_atomic_rollback_and_retry) ... ok
+test_TC23_concurrent_over_receipt_guard (test_interface.InterfaceTests.test_TC23_concurrent_over_receipt_guard) ... ok
+test_TC24_semantic_retry_canonicalization (test_interface.InterfaceTests.test_TC24_semantic_retry_canonicalization) ... ok
+test_TC25_rejected_key_can_be_corrected (test_interface.InterfaceTests.test_TC25_rejected_key_can_be_corrected) ... ok
+test_TC26_fractional_precision (test_interface.InterfaceTests.test_TC26_fractional_precision) ... ok
+test_TC27_reversal_field_contract (test_interface.InterfaceTests.test_TC27_reversal_field_contract) ... ok
+test_TC28_payload_limit (test_interface.InterfaceTests.test_TC28_payload_limit) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.894s
+
+OK
